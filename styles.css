@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@500;600&display=swap");
+
+:root {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.container {
+  display: grid;
+  min-block-size: 95vh;
+  place-items: center;
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+}

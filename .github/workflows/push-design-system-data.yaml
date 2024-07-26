@@ -1,0 +1,17 @@
+name: Push Design System Data
+run-name: Push design system adoption data to zeroheight 📈
+on: [push]
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Analyze
+        run: |
+          echo "🔍 Analyzing component adoption data"
+          npx @zeroheight/adoption-cli analyze
+      - name: Push
+        run: |
+          echo "🚀 Pushing component adoption data to zeroheight"
+          npx @zeroheight/adoption-cli auth --client ${{ secrets.ZEROHEIGHT_CLIENT_ID }} --token ${{ secrets.ZEROHEIGHT_ACCESS_TOKEN }}
+      - name: Complete
+        run: echo "💫 Component adoption update complete"

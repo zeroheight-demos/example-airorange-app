@@ -12,6 +12,6 @@ jobs:
       - name: Analyze
         run: |
           echo "📈 Analyzing adoption data and pushing to zeroheight"
-          npx @zeroheight/adoption-cli analyze --interactive false
+          npx @zeroheight/adoption-cli analyze --repo-name example-airorange-app --interactive false
       - name: Complete
         run: echo "💫 Component adoption update complete"

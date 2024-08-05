@@ -5,13 +5,13 @@ jobs:
   analyze:
     runs-on: ubuntu-latest
     steps:
+      - name: Authenticate
+        run: |
+          echo "🔐 Setting up authentication with zeroheight"
+          npx @zeroheight/adoption-cli auth --client ${{ secrets.ZEROHEIGHT_CLIENT_ID }} --token ${{ secrets.ZEROHEIGHT_ACCESS_TOKEN }}
       - name: Analyze
         run: |
-          echo "🔍 Analyzing component adoption data"
-          npx @zeroheight/adoption-cli analyze
-      - name: Push
-        run: |
-          echo "🚀 Pushing component adoption data to zeroheight"
-          npx @zeroheight/adoption-cli auth --client ${{ secrets.ZEROHEIGHT_CLIENT_ID }} --token ${{ secrets.ZEROHEIGHT_ACCESS_TOKEN }}
+          echo "📈 Analyzing adoption data and pushing to zeroheight"
+          npx @zeroheight/adoption-cli analyze --interactive false
       - name: Complete
         run: echo "💫 Component adoption update complete"

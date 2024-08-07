@@ -14,6 +14,10 @@ export default function App() {
             name="Seth Corker"
             src="https://sethcorker.com/static/web_prof-small-5ea7bafb5e58043f7536b63497995d29.jpg"
           />
+          <Avatar
+            name="Rosie Watson"
+            src="https://www.rosiewatson.dev/content/images/2024/07/rosie_headshot-5.jpeg"
+          />
         </div>
       </div>
     </div>

@@ -18,6 +18,10 @@ export default function App() {
             name="Rosie Watson"
             src="https://www.rosiewatson.dev/content/images/2024/07/rosie_headshot-5.jpeg"
           />
+          <Avatar
+            name="Rab Rennie"
+            src="https://avatars.githubusercontent.com/u/9087372?v=4"
+          />
         </div>
       </div>
     </div>

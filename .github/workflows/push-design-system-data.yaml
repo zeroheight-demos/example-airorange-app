@@ -9,6 +9,7 @@ on: [push]
 jobs:
   analyze:
     runs-on: ubuntu-latest
+    steps:
       - name: Start
         run: |
           echo "🚀 Analyzing adoption data and pushing to zeroheight"

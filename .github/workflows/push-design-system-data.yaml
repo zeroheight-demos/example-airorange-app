@@ -10,13 +10,18 @@ jobs:
   analyze:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
       - name: Setup
         uses: actions/setup-node@v3
         with:
           node-version: "20"
+
       - name: Start
         run: |
           echo "🚀 Analyzing adoption data and pushing to zeroheight"
-          npx @zeroheight/adoption-cli analyze --interactive false --repo-name example-airorange-app 
+          npx @zeroheight/adoption-cli analyze --interactive false --repo-name example-airorange-app
+
       - name: Complete
         run: echo "💫 Component adoption analysis complete"

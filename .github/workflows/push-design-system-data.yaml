@@ -1,17 +1,17 @@
 name: Push Design System Data
-run-name: Push design system adoption data to zeroheight 📈
+
+env:
+  ZEROHEIGHT_CLIENT_ID: "${{ secrets.ZEROHEIGHT_CLIENT_ID }}"
+  ZEROHEIGHT_ACCESS_TOKEN: "${{ secrets.ZEROHEIGHT_ACCESS_TOKEN }}"
+
+run-name: 📊 Analyze and push design system adoption data to zeroheight
 on: [push]
 jobs:
   analyze:
     runs-on: ubuntu-latest
-    steps:
-      - name: Authenticate
+      - name: Start
         run: |
-          echo "🔐 Setting up authentication with zeroheight"
-          npx @zeroheight/adoption-cli auth --client ${{ secrets.ZEROHEIGHT_CLIENT_ID }} --token ${{ secrets.ZEROHEIGHT_ACCESS_TOKEN }}
-      - name: Analyze
-        run: |
-          echo "📈 Analyzing adoption data and pushing to zeroheight"
-          npx @zeroheight/adoption-cli analyze --repo-name example-airorange-app --interactive false
+          echo "🚀 Analyzing adoption data and pushing to zeroheight"
+          npx @zeroheight/adoption-cli analyze --interactive false --repo-name example-airorange-app 
       - name: Complete
-        run: echo "💫 Component adoption update complete"
+        run: echo "💫 Component adoption analysis complete"

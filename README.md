@@ -7,7 +7,7 @@ This small example application uses our AirOrange design system to demonstrate t
 
 
 ## Installation
-1. `git clone git@github.com:zh-ski/example-airorange-app.git`
+1. `git clone git@github.com:zeroheight/example-airorange-app.git`
 2. `npm install`
 3. `npm run dev`
 

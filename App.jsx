@@ -22,6 +22,10 @@ export default function App() {
             name="Rab Rennie"
             src="https://avatars.githubusercontent.com/u/9087372?v=4"
           />
+          <Avatar
+            name="Nic A"
+            src="https://nicallen.co.uk/assets/images/image01.jpg?v=46174480"
+          />
         </div>
       </div>
     </div>

@@ -1,9 +1,10 @@
-name: Post Deploy
+name: Deploy
 
 on: [push]
+
 jobs:
-  analyze:
+  post-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Analyze design system adoption data
-        uses: zh-ski/action-design-system-adoption@v0
+        uses: zh-ski/action-design-system-adoption@main
